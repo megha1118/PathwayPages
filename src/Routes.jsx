@@ -1,10 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Routes as ReactRoutes, Route } from "react-router-dom";
 import { Layout } from './components/Layout';
-import {HomeIndex,AboutIndex,InformationIndex, ContactUsIndex} from './pages/';
+import {HomeIndex,AboutIndex,InformationIndex, ContactUsIndex, ProductIndex, LoginIndex} from './pages/';
 import { NoMatch } from './pages/NoMatch';
-import { LoginIndex } from './pages/Login/Login.Index';
 // import { InformationIndex } from './pages/Information/Information.Index';
 
 const Routes = props => {
@@ -14,6 +12,7 @@ const Routes = props => {
           <Route index element={<HomeIndex />} />
           <Route path="about" element={<AboutIndex />} />
           <Route path="login" element={<LoginIndex/>}/>
+          <Route path='products' element={<ProductIndex/>}/>
           <Route path="contactUs" element={<ContactUsIndex/>}/>
          <Route path="information" element={<InformationIndex/>}/>
           <Route path="*" element={<NoMatch />} />

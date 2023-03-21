@@ -32,6 +32,12 @@ const Menubar = () => {
             command: () => navigate("/login")
 
         },
+        {
+            label: 'Products',
+            icon: 'pi pi-fw pi-user',
+            command: () => navigate("/products")
+
+        }
     ];
 
 
