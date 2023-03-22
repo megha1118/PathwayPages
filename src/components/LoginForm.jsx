@@ -1,8 +1,9 @@
 import React from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
+import { Link } from 'react-router-dom';
 
-const LoginIndex = () => {
+const LoginForm = () => {
 
 	return (
 
@@ -29,9 +30,10 @@ const LoginIndex = () => {
 			</div>
 			<div className='login-forget-password'>
 				<span style={{fontSize:'25px'}}><button className="p-link" style={{fontSize:'20px'}} >
-					Forgot Password
-					</button>
-					</span>
+                    <Link to='/ForgotPassword'>
+                    Forgot Password
+                    </Link>
+					</button></span>
 			</div>
 			</div>
 			
@@ -41,4 +43,4 @@ const LoginIndex = () => {
 	)
 }
 
-export { LoginIndex }
+export { LoginForm }

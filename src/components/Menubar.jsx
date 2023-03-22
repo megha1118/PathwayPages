@@ -3,7 +3,7 @@ import React from 'react';
 import { Menubar as Menubarprime } from 'primereact/menubar';
 import { Sidebar } from './Sidebar';
 import { useNavigate } from 'react-router-dom';
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 const Menubar = () => {
@@ -17,8 +17,9 @@ const Menubar = () => {
 
         },
         {
-            label: 'About',
+            label: 'Login',
             icon: 'pi pi-fw pi-book',
+            command:()=> navigate("/login")
 
         },
         {
@@ -27,9 +28,9 @@ const Menubar = () => {
             command: () => navigate("/contactUs")
         },
         {
-            label: 'Login',
+            label: 'Recover Password',
             icon: 'pi pi-fw pi-user',
-            command: () => navigate("/login")
+            command: () => navigate("/recoverpassword")
 
         },
         {
