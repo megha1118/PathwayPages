@@ -1,11 +1,13 @@
 import React from 'react'
 import { Routes as ReactRoutes, Route } from "react-router-dom";
 import { Layout } from './components/Layout';
-import {HomeIndex,InformationIndex, ContactUsIndex, ProductIndex, } from './pages/';
+import {HomeIndex,InformationIndex, ContactUsIndex, ProductIndex } from './pages/';
 import { Loginpage } from './pages/LoginPage/Loginpage';
 import { NoMatch } from './pages/NoMatch';
 import { ForgotPass } from './pages/ForgotPass/ForgotPass';
 import { RecoverPass } from './pages/RecoverPass/RecoverPass';
+import { Registration } from './pages/Registration/Registration';
+import PrivateRoute from './Private Route/PrivateRoute';
 // import { InformationIndex } from './pages/Information/Information.Index';
 
 const Routes = props => {
@@ -16,7 +18,8 @@ const Routes = props => {
           <Route path="login" element={<Loginpage />} />
           <Route path='ForgotPassword' element={<ForgotPass/>}/>
           {/* <Route path="login" element={<Loginpage/>}/> */}
-          <Route path='products' element={<ProductIndex/>}/>
+          <PrivateRoute path='products' element={<ProductIndex/>} />
+          <Route path='Register' element={<Registration/>}/>
           <Route path='recoverpassword' element={<RecoverPass/>}/>
           <Route path="contactUs" element={<ContactUsIndex/>}/>
          <Route path="information" element={<InformationIndex/>}/>

@@ -11,7 +11,6 @@ const Menubar = () => {
     const items = [
 
         {
-
             label: 'Home',
             icon: 'pi pi-fw pi-home',
 
@@ -20,7 +19,6 @@ const Menubar = () => {
             label: 'Login',
             icon: 'pi pi-fw pi-book',
             command:()=> navigate("/login")
-
         },
         {
             label: 'Contact Us',
@@ -41,10 +39,8 @@ const Menubar = () => {
         }
     ];
 
-
     const start = <Link to='/' ><img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" height="40" className="mr-2"></img></Link>;
     const end = <Sidebar />;
-
 
     return (
         <div className="card">
